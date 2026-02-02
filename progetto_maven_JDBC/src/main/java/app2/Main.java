@@ -40,14 +40,15 @@ public class Main {
                         System.out.println("Task non salvato!");
                     }
                     break;
+
                 case "2":
                     System.out.println("----------Inserisci l'id da rimuovere----------");
-                    int id = sc.nextInt();
+                    String id = sc.next();
                     if (String.valueOf(id).isBlank()){
                         System.out.println("ID non valido");
                         break;
                     }
-                    boolean okID = TodoDao.rimuoviRisorsa(id);
+                    boolean okID = TodoDao.rimuoviRisorsa(Integer.parseInt(id));
 
                     if (okID){
                         System.out.println("Task rimossa crrettamente");
