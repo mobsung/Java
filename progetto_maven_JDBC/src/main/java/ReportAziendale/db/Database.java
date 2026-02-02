@@ -1,4 +1,4 @@
-package GestioneUtenti.db;
+package ReportAziendale.db;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,6 +24,7 @@ public class Database {
     }
 
     public static Connection getConnection() throws SQLException {
+
         String URL=props.getProperty("db.url");
         String USER=props.getProperty("db.user");
         String PASS=props.getProperty("db.password");
