@@ -12,21 +12,21 @@ import java.util.HashMap;
 
 public class DAOUtenti {
 
-    public static Utente registrazione(String username, String nome, String cognome, String password, int annoNascita) throws UsernameGiaInUsoException {
+    public static Utente registrazione(Utente ut) throws UsernameGiaInUsoException {
         String sql = "INSERT INTO utenti (username, nome, cognome, password, anno_nascita) VALUES (?, ?, ?, ?, ?)";
 
         try{
             Connection conn = Database.getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, username);
-            ps.setString(2, nome);
-            ps.setString(3, cognome);
-            ps.setString(4, password);
-            ps.setInt(5, annoNascita);
+            ps.setString(1, ut.getUsername());
+            ps.setString(2, ut.getNome());
+            ps.setString(3, ut.getCognome());
+            ps.setString(4, ut.getPassword());
+            ps.setInt(5, ut.getAnnoNascita());
 
             ps.execute();
 
-            return new Utente(username, nome, cognome, password, annoNascita);
+            return ut;
         } catch (SQLException e){
             throw new UsernameGiaInUsoException(e.getMessage());
         }

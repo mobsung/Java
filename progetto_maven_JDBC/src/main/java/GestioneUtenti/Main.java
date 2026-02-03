@@ -12,7 +12,7 @@ public class Main {
         HashMap<String, Utente> utentiRegistrati = new HashMap<>();
 
         try{
-            Utente ut  = DAOUtenti.registrazione("MATTEW" , "Matteo", "Fabbrizio", "MattPass", 1500);
+            Utente ut  = DAOUtenti.registrazione(new Utente("MATTEW" , "Matteo", "Fabbrizio", "MattPass", 1500));
             utentiRegistrati.put(ut.getUsername(), ut);
         } catch(UsernameGiaInUsoException e){
             System.out.println(e.getMessage());
