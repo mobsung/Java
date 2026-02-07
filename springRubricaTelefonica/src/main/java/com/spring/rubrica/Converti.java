@@ -23,7 +23,7 @@ public class Converti {
 		return contatto;
 		
 	}
-	
+
 	public static ContattoDTO ContattoEntityDTO(Contatto contatto) {
 		ContattoDTO dto = new ContattoDTO();
 		dto.setNome(contatto.getNome());

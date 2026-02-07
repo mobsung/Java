@@ -43,8 +43,8 @@ public class Rubrica {
 		return contatti;
 	}
 	
-	public void addContatto(Contatto contatto) {
-		contatti.add(contatto);
+	public boolean addContatto(Contatto contatto) {
+		return contatti.add(contatto);
 	}
 	
 	public void setContatti(Set<Contatto> contatti) {
