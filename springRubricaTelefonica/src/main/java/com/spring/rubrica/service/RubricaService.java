@@ -18,7 +18,11 @@ import com.spring.rubrica.entity.Rubrica;
 public class RubricaService {
 	
 	DAORubrica dao = new DAORubrica();
-	
+
+	public DAORubrica getDao() {
+		return dao;
+	}
+
 	public boolean insert(RubricaDTO dto) {
 		return dao.registra(RubricaDTOEntity(dto));
 	}

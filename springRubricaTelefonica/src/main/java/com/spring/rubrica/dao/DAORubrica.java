@@ -9,7 +9,7 @@ import com.spring.rubrica.entity.Rubrica;
 
 public class DAORubrica {
 	
-	Map<Integer, Rubrica> rubriche = new HashMap<Integer, Rubrica>();
+	Map<Integer, Rubrica> rubriche = new HashMap<>();
 	
 	public boolean registra(Rubrica rubrica) {
 		return rubriche.putIfAbsent(rubrica.getId(), rubrica) == null;
