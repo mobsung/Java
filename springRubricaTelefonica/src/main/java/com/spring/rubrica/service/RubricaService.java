@@ -62,7 +62,7 @@ public class RubricaService {
 	
 	public RubricaNomiProprietariTotaleRubricheDTO nomiTotaleProprietari(){
 		List<String> proprietari = dao.selectAll().stream()
-				.map(r -> r.getProprietario())
+				.map(Rubrica::getProprietario)
 				.toList();
 		return new RubricaNomiProprietariTotaleRubricheDTO(proprietari, proprietari.size());
 	}
@@ -75,8 +75,8 @@ public class RubricaService {
 	
 	public List<LocalDate> anniCreazioneAsc(){
 		return dao.selectAll().stream()
-				.map(r -> r.getAnnoCreazione())
-				.sorted((r1, r2) -> r1.compareTo(r2))
+				.map(Rubrica::getAnnoCreazione)
+				.sorted(LocalDate::compareTo)
 				.toList();
 	}
 	

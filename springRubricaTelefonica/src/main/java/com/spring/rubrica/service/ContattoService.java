@@ -3,6 +3,7 @@ package com.spring.rubrica.service;
 import static com.spring.rubrica.Converti.*;
 
 
+import com.spring.rubrica.Converti;
 import com.spring.rubrica.dao.DAORubrica;
 import com.spring.rubrica.dto.ContattoDTO;
 import com.spring.rubrica.dto.ContattoIdDTO;
@@ -150,8 +151,8 @@ public class ContattoService {
 			return null;
 		}
 		return rubrica.getContatti().stream()
-				.filter(c -> c.isPreferito())
-				.map(c -> ContattoEntityDTO(c))
+				.filter(Contatto::isPreferito)
+				.map(Converti::ContattoEntityDTO)
 				.toList();
 	}
 }
