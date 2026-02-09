@@ -23,10 +23,6 @@ public class RubricaService {
 	@Autowired
 	private DAORubrica dao;
 
-	public DAORubrica getDao() {
-		return dao;
-	}
-
 	public boolean insert(RubricaDTO dto) {
 		return dao.registra(RubricaDTOEntity(dto));
 	}
