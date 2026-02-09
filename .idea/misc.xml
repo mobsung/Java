@@ -4,14 +4,15 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
+        <option value="$PROJECT_DIR$/springRubricaTelefonica/pom.xml" />
+        <option value="$PROJECT_DIR$/progetto_maven_JDBC/pom.xml" />
         <option value="$PROJECT_DIR$/spring02/pom.xml" />
         <option value="$PROJECT_DIR$/springUniversita/pom.xml" />
-        <option value="$PROJECT_DIR$/progetto_maven_JDBC/pom.xml" />
-        <option value="$PROJECT_DIR$/springRubricaTelefonica/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringDepIng/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="openjdk-25" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="17 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

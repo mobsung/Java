@@ -13,11 +13,15 @@ import com.spring.rubrica.dto.RubricaProprietariTotaleContattiDTO;
 import com.spring.rubrica.dto.RubricaProprietarioAnnoCreazioneDTO;
 import com.spring.rubrica.dto.RubricaProprietarioCreazionePiuVecchiaDTO;
 import com.spring.rubrica.entity.Rubrica;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class RubricaService {
-	
-	DAORubrica dao = new DAORubrica();
+
+	@Autowired
+	private DAORubrica dao;
 
 	public DAORubrica getDao() {
 		return dao;

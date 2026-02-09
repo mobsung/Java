@@ -10,18 +10,18 @@ import com.spring.rubrica.dto.ContattoModificaPreferito;
 import com.spring.rubrica.dto.ContattoNomeCognomeDatoGruppoDTO;
 import com.spring.rubrica.entity.Contatto;
 import com.spring.rubrica.entity.Rubrica;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+@Service
 public class ContattoService {
 
-	private final DAORubrica dao;
-
-	public ContattoService(DAORubrica dao) {
-		this.dao = dao;
-	}
+	@Autowired
+	private DAORubrica dao;
 
 	public boolean insertContatto(int id, ContattoDTO contatttoDto){
 		Rubrica rubrica = dao.findById(id);
