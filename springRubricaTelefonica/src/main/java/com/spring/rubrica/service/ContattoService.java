@@ -24,12 +24,12 @@ public class ContattoService {
 	@Autowired
 	private DAORubrica dao;
 
-	public boolean insertContatto(int id, ContattoDTO contatttoDto){
+	public boolean insertContatto(int id, ContattoDTO contattoDto){
 		Rubrica rubrica = dao.findById(id);
 		if (rubrica == null) {
 			return false;
 		}
-		return rubrica.addContatto(ContattoDTOEntity(contatttoDto));
+		return rubrica.addContatto(ContattoDTOEntity(contattoDto));
 	}
 
 	public ContattoDTO selectById(int id, ContattoIdDTO dto){
