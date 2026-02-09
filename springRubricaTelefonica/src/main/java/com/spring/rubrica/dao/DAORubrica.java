@@ -27,7 +27,7 @@ public class DAORubrica {
 	}
 	
 	public List<Rubrica> selectAll(){
-		return new ArrayList<Rubrica>(rubriche.values());
+		return new ArrayList<>(rubriche.values());
 	}
 	
 	public Rubrica delete(int id) {
