@@ -39,7 +39,7 @@ public class ContattoService {
 					.getContatti().stream()
 					.filter(c -> c.getNome().equals(dto.getNome()) && c.getCognome().equals(dto.getCognome()))
 					.findFirst()
-					.map(c -> ContattoEntityDTO(c))
+					.map(Converti::ContattoEntityDTO)
 					.orElse(null);
 		}
 		return null;

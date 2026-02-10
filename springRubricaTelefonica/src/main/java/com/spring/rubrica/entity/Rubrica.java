@@ -46,9 +46,9 @@ public class Rubrica {
 	public boolean addContatto(Contatto contatto) {
 		return contatti.add(contatto);
 	}
-	
-	public void setContatti(Set<Contatto> contatti) {
-		contatti.addAll(contatti);
+
+	public void setContatti(HashSet<Contatto> contatti) {
+		this.contatti = contatti;
 	}
 
 	public int getId() {

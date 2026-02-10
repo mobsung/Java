@@ -16,12 +16,6 @@ public class RubricaDTO {
 
 	}
 
-	public RubricaDTO(String proprietario, LocalDate annoCreazione) {
-		super();
-		this.proprietario = proprietario;
-		this.annoCreazione = annoCreazione;
-	}
-
 	public String getProprietario() {
 		return proprietario;
 	}
@@ -42,12 +36,8 @@ public class RubricaDTO {
 		return contatti;
 	}
 	
-	public void addContatto(ContattoDTO contatto) {
-		contatti.add(contatto);
-	}
-	
-	public void setContatti(Set<ContattoDTO> contatti) {
-		contatti.addAll(contatti);
+	public void setContatti(Set<ContattoDTO> c) {
+		contatti.addAll(c);
 	}
 	
 	public int getId() {

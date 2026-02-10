@@ -35,7 +35,7 @@ public class RubricaService {
 	}
 	
 	public List<RubricaDTO> selectAll(){
-		return ALRubricaEntityDTO(dao.selectAll());	
+		return ALRubricaEntityDTO(dao.selectAll());
 	}
 	
 	public RubricaDTO delete(int id) {
