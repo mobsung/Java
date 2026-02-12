@@ -12,9 +12,11 @@
         <module name="SpringStatisticheCalcoloAOP" />
         <module name="springRubricaTelefonica" />
         <module name="spring02" />
-        <module name="SpringDepIng" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringDepIng" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
