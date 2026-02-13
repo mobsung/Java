@@ -2,6 +2,8 @@ package com.spring.rubrica.controller;
 
 import com.spring.rubrica.dto.*;
 import com.spring.rubrica.service.ContattoService;
+import com.spring.rubrica.service.RubricaService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,8 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.spring.rubrica.service.RubricaService;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -28,13 +28,13 @@ public class RubricaController {
 	ContattoService serviceContatto;
 	
 	@PostMapping(path="/insert", consumes="application/json")
-	public boolean insert(@RequestBody RubricaDTO Rdto) {
-		return service.insert(Rdto);
+	public void insert(@RequestBody RubricaDTO Rdto) {
+		service.insert(Rdto);
 	}
 	
 	@PostMapping(path="insert/all", consumes="application/json")
-	public boolean insertAll(@RequestBody List<RubricaDTO> LRdto) {
-		return service.insertAll(LRdto);
+	public void insertAll(@RequestBody List<RubricaDTO> LRdto) {
+		service.insertAll(LRdto);
 	}
 	
 	@GetMapping(path="/{id}", produces="application/json")
@@ -88,8 +88,8 @@ public class RubricaController {
 	}
 
 	@PostMapping(path="/{id}/contatto", consumes="application/json")
-	public boolean insertContatto(@PathVariable int id, @RequestBody ContattoDTO dto){
-		return serviceContatto.insertContatto(id, dto);
+	public void insertContatto(@PathVariable int id, @RequestBody ContattoDTO dto){
+		serviceContatto.insertContatto(id, dto);
 	}
 
 	@GetMapping(path="/{id}/contatto", produces="application/json", consumes="application/json")
@@ -146,6 +146,5 @@ public class RubricaController {
 	public List<ContattoDTO> findPreferiti(@PathVariable int id){
 		return serviceContatto.findPreferiti(id);
 	}
-
 
 }

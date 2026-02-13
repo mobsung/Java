@@ -6,10 +6,6 @@ public class RubricaProprietarioAnnoCreazioneDTO {
 	private String proprietario;
 	private LocalDate annoCreazione;
 	
-	public RubricaProprietarioAnnoCreazioneDTO() {
-
-	}
-	
 	public RubricaProprietarioAnnoCreazioneDTO(String proprietario, LocalDate annoCreazione) {
 		super();
 		this.proprietario = proprietario;
