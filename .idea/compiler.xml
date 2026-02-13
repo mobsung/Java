@@ -12,6 +12,7 @@
         <module name="SpringStatisticheCalcoloAOP" />
         <module name="springRubricaTelefonica" />
         <module name="spring02" />
+        <module name="SpringEcommerce" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringAOP" options="-parameters" />
       <module name="SpringDepIng" options="-parameters" />
+      <module name="SpringEcommerce" options="-parameters" />
       <module name="SpringStatisticheCalcoloAOP" options="-parameters" />
       <module name="spring02" options="-parameters" />
       <module name="springRubricaTelefonica" options="-parameters" />
