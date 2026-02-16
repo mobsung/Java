@@ -40,7 +40,7 @@ public class ErrorHandlers {
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorItemDTO> orderAlreadyPresentHandler(OrderAlreadyPresentException exc){
+    public ResponseEntity<ErrorItemDTO> orderAlreadyPresentHandler(ItemAlreadyPresentException exc){
         ErrorItemDTO err = new ErrorItemDTO(
                 LocalDate.now(),
                 HttpStatus.NOT_FOUND,

@@ -16,4 +16,8 @@ public class OrderCreateRequestDTO {
     public List<OrderItemDTO> getOrderedItems() {
         return orderedItems;
     }
+
+    public void setOrderedItems(List<OrderItemDTO> orderedItems) {
+        this.orderedItems = orderedItems;
+    }
 }

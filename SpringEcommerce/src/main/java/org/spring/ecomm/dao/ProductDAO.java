@@ -5,8 +5,11 @@ import java.util.List;
 
 public interface ProductDAO {
 
-    public Product getProductById(int id);
+    void addProduct(Product product);
 
-    public List<Product> getAll();
+    Product getProductById(int id);
 
+    List<Product> getAll();
+
+    Product deleteProduct(int id);
 }

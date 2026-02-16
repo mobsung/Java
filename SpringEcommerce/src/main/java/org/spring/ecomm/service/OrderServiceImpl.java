@@ -30,11 +30,11 @@ public class OrderServiceImpl implements OrderService{
 
     public void createOrder(OrderCreateRequestDTO dto) {
         double totalAmount = dto.getOrderedItems().stream()
-                .mapToDouble((o1) -> (double) o1.getQuantity() * o1.getProductId())
+                .mapToDouble((o1) -> o1.getQuantity() * o1.getUnitPrice())
                 .sum();
         int id = daoOrder.getAll().stream()
                 .mapToInt(Order::getId)
-                .reduce(1, Integer::max);
+                .reduce(0, Integer::max) + 1;
 
         Order order = new Order(
                 id,
@@ -49,14 +49,14 @@ public class OrderServiceImpl implements OrderService{
             if (product.getStock() - p.getQuantity() < 0) {
                 throw new InsufficientStockException("Product ID: " + p.getProductId() + " not enough in stock");
             }
-            order.setStatus(Order.Status.CREATED);
-            daoOrder.addOrder(order);
         }
+        order.setStatus(Order.Status.CREATED);
+        daoOrder.addOrder(order);
     }
 
     public OrderDTO confirmOrder(int id) {
         Order order = daoOrder.getOrderByID(id);
-        if(!order.getStatus().equals(Order.Status.CREATED)){
+        if(order.getStatus() != Order.Status.CREATED){
             throw new InvalidOrderStateException("Order must be confirmed");
         }
         for(OrderItem p : order.getOrderItemList()) {
@@ -64,14 +64,14 @@ public class OrderServiceImpl implements OrderService{
             if (product.getStock() - p.getQuantity() < 0) {
                 throw new InsufficientStockException("Product ID: " + p.getProductId() + " not enough in stock");
             }
-            order.setStatus(Order.Status.CONFIRMED);
         }
+        order.setStatus(Order.Status.CONFIRMED);
         return OrderEntityDto(order);
     }
 
     public OrderDTO shipOrder(int id){
         Order order = daoOrder.getOrderByID(id);
-        if(!order.getStatus().equals(Order.Status.CREATED)) {
+        if(order.getStatus() != Order.Status.CREATED) {
             throw new InvalidOrderStateException("Order must be confirmed");
         }
         order.setStatus(Order.Status.SHIPPED);
@@ -80,7 +80,7 @@ public class OrderServiceImpl implements OrderService{
 
     public OrderDTO deliverOrder(int id){
         Order order = daoOrder.getOrderByID(id);
-        if(!order.getStatus().equals(Order.Status.SHIPPED)) {
+        if(order.getStatus() != Order.Status.SHIPPED) {
             throw new InvalidOrderStateException("Order must be shipped");
         }
         order.setStatus(Order.Status.DELIVERED);
@@ -114,21 +114,21 @@ public class OrderServiceImpl implements OrderService{
 
     public List<OrderDTO> listCreated(){
         return daoOrder.getAll().stream()
-                .filter(o -> o.getStatus().equals(Order.Status.CREATED))
+                .filter(o -> o.getStatus() == Order.Status.CREATED)
                 .map(Converter::OrderEntityDto)
                 .toList();
     }
 
     public List<OrderDTO> listConfirmed(){
         return daoOrder.getAll().stream()
-                .filter(o -> o.getStatus().equals(Order.Status.CONFIRMED))
+                .filter(o -> o.getStatus() == Order.Status.CONFIRMED)
                 .map(Converter::OrderEntityDto)
                 .toList();
     }
 
     public List<OrderDTO> listShipped(){
         return daoOrder.getAll().stream()
-                .filter(o -> o.getStatus().equals(Order.Status.SHIPPED))
+                .filter(o -> o.getStatus() == Order.Status.SHIPPED)
                 .map(Converter::OrderEntityDto)
                 .toList();
     }

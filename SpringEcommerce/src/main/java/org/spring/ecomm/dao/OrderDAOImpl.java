@@ -2,7 +2,7 @@ package org.spring.ecomm.dao;
 
 import org.spring.ecomm.entity.Order;
 import org.spring.ecomm.exceptions.OrderNotFoundException;
-import org.spring.ecomm.exceptions.OrderAlreadyPresentException;
+import org.spring.ecomm.exceptions.ItemAlreadyPresentException;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class OrderDAOImpl implements OrderDAO{
 
     public void addOrder(Order order){
         if(orders.containsKey(order.getId())){
-            throw new OrderAlreadyPresentException("Order ID: " + order.getId() + "already present");
+            throw new ItemAlreadyPresentException("Order ID: " + order.getId() + " already present");
         }
         orders.put(order.getId(), order);
     }
