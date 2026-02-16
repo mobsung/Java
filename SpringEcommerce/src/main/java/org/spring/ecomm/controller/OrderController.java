@@ -15,9 +15,9 @@ public class OrderController {
     @Autowired
     OrderService service;
 
-    @PostMapping(path="/orders/{id}")
-    void createOrder(@PathVariable int id, OrderCreateRequestDTO dto){
-        service.createOrder(id, dto);
+    @PostMapping(path="/orders", consumes = "application/json")
+    void createOrder(@RequestBody OrderCreateRequestDTO dto){
+        service.createOrder(dto);
     }
 
     @PatchMapping(path="/{id}/confirm", produces = "application/json")

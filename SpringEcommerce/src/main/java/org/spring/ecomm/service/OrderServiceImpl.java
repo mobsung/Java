@@ -28,10 +28,13 @@ public class OrderServiceImpl implements OrderService{
     @Autowired
     ProductDAO daoProduct;
 
-    public void createOrder(int id, OrderCreateRequestDTO dto) {
+    public void createOrder(OrderCreateRequestDTO dto) {
         double totalAmount = dto.getOrderedItems().stream()
                 .mapToDouble((o1) -> (double) o1.getQuantity() * o1.getProductId())
                 .sum();
+        int id = daoOrder.getAll().stream()
+                .mapToInt(Order::getId)
+                .reduce(1, Integer::max);
 
         Order order = new Order(
                 id,
