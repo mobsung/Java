@@ -1,9 +1,12 @@
 package org.spring.ecomm.dao;
 
 import org.spring.ecomm.entity.Product;
+import java.util.List;
 
 public interface ProductDAO {
 
-    Product getProduct(int id);
+    public Product getProductById(int id);
+
+    public List<Product> getAll();
 
 }

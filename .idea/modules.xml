@@ -3,10 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Java.iml" filepath="$PROJECT_DIR$/.idea/Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/progetto_maven_JDBC/progetto_maven_JDBC.iml" filepath="$PROJECT_DIR$/progetto_maven_JDBC/progetto_maven_JDBC.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring02/spring02.iml" filepath="$PROJECT_DIR$/spring02/spring02.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springRubricaTelefonica/springRubricaTelefonica.iml" filepath="$PROJECT_DIR$/springRubricaTelefonica/springRubricaTelefonica.iml" />
-      <module fileurl="file://$PROJECT_DIR$/springUniversita/springUniversita.iml" filepath="$PROJECT_DIR$/springUniversita/springUniversita.iml" />
     </modules>
   </component>
 </project>

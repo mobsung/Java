@@ -1,6 +1,7 @@
 package org.spring.ecomm.dto;
 
 import org.spring.ecomm.entity.Order;
+import org.spring.ecomm.entity.OrderItem;
 import org.spring.ecomm.entity.Product;
 
 import java.time.LocalDate;
@@ -13,7 +14,7 @@ public class OrderDTO {
     private double totalAmount;
     private Order.Status status;
     private LocalDate createdAt;
-    private List<Product> orderItemList = new ArrayList<>();
+    private List<OrderItemDTO> orderItemList = new ArrayList<>();
 
     public OrderDTO(){}
 
@@ -56,11 +57,11 @@ public class OrderDTO {
         this.createdAt = createdAt;
     }
 
-    public List<Product> getOrderItemList() {
+    public List<OrderItemDTO> getOrderItemList() {
         return orderItemList;
     }
 
-    public void setOrderItemList(List<Product> orderItemList) {
+    public void setOrderItemList(List<OrderItemDTO> orderItemList) {
         this.orderItemList.addAll(orderItemList);
     }
 }
