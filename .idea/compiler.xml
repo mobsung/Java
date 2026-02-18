@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringAOP" />
+        <module name="SpringHibernateImpiegati" />
         <module name="HibSpriPokemon" />
         <module name="springUniversita" />
         <module name="progetto_maven_JDBC" />
@@ -26,6 +27,7 @@
       <module name="SpringAOP" options="-parameters" />
       <module name="SpringDepIng" options="-parameters" />
       <module name="SpringEcommerce" options="-parameters" />
+      <module name="SpringHibernateImpiegati" options="-parameters" />
       <module name="SpringStatisticheCalcoloAOP" options="-parameters" />
       <module name="spring02" options="-parameters" />
       <module name="springRubricaTelefonica" options="-parameters" />
