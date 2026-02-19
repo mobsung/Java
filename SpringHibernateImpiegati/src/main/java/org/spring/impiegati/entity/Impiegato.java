@@ -2,6 +2,8 @@ package org.spring.impiegati.entity;
 
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 import java.time.LocalDate;
@@ -10,6 +12,7 @@ import java.time.LocalDate;
 public class Impiegato {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int matricola;
 
     private String nome, cognome;
@@ -18,8 +21,7 @@ public class Impiegato {
 
     public Impiegato(){}
 
-    public Impiegato(int matricola, String nome, String cognome, double salario, LocalDate dataAssunzione) {
-        this.matricola = matricola;
+    public Impiegato(String nome, String cognome, double salario, LocalDate dataAssunzione) {
         this.nome = nome;
         this.cognome = cognome;
         this.salario = salario;

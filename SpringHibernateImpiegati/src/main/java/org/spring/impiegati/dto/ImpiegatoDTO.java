@@ -12,8 +12,7 @@ public class ImpiegatoDTO {
 
     public ImpiegatoDTO(){}
 
-    public ImpiegatoDTO(int matricola, String nome, String cognome, double salario, LocalDate dataAssunzione) {
-        this.matricola = matricola;
+    public ImpiegatoDTO(String nome, String cognome, double salario, LocalDate dataAssunzione) {
         this.nome = nome;
         this.cognome = cognome;
         this.salario = salario;

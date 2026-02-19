@@ -1,6 +1,8 @@
 package org.spring.impiegati.service;
 
 import static org.spring.impiegati.mapper.MapperImpiegato.*;
+
+import jakarta.transaction.Transactional;
 import org.spring.impiegati.dto.ImpiegatoDTO;
 import org.spring.impiegati.dto.NomeCognomeDTO;
 import org.spring.impiegati.entity.Impiegato;
@@ -14,6 +16,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @Service
+@Transactional
 public class ImpiegatoServiceImpl implements ImpiegatoService{
 
     @Autowired
@@ -110,5 +113,19 @@ public class ImpiegatoServiceImpl implements ImpiegatoService{
                 .max(Comparator.comparingDouble(Impiegato::getSalario))
                 .map(MapperImpiegato::ImpiegatoEntityDto)
                 .orElse(null);
+    }
+
+    @Override
+    public List<ImpiegatoDTO> getImpiegatiOrdinatiNome() {
+        return dao.getImpiegatiOrdinatiNome().stream()
+                .map(MapperImpiegato::ImpiegatoEntityDto)
+                .toList();
+    }
+
+    @Override
+    public List<ImpiegatoDTO> getImpiegatoSalarioMaggiore() {
+        return dao.getImpiegatoSalarioMaggiore().stream()
+                .map(MapperImpiegato::ImpiegatoEntityDto)
+                .toList();
     }
 }

@@ -30,4 +30,8 @@ public interface ImpiegatoService {
     ImpiegatoDTO visualizzaAssunzionePiuVecchia();
 
     ImpiegatoDTO visualizzaSalarioMaggioreDatoTempo(LocalDate data);
+
+    List<ImpiegatoDTO> getImpiegatiOrdinatiNome();
+
+    List<ImpiegatoDTO> getImpiegatoSalarioMaggiore();
 }
