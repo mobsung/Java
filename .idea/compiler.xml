@@ -12,6 +12,7 @@
         <module name="springUniversita" />
         <module name="progetto_maven_JDBC" />
         <module name="SpringStatisticheCalcoloAOP" />
+        <module name="SpringHibernateAzienda" />
         <module name="springRubricaTelefonica" />
         <module name="spring02" />
         <module name="SpringEcommerce" />
@@ -27,6 +28,7 @@
       <module name="SpringAOP" options="-parameters" />
       <module name="SpringDepIng" options="-parameters" />
       <module name="SpringEcommerce" options="-parameters" />
+      <module name="SpringHibernateAzienda" options="-parameters" />
       <module name="SpringHibernateImpiegati" options="-parameters" />
       <module name="SpringStatisticheCalcoloAOP" options="-parameters" />
       <module name="spring02" options="-parameters" />
