@@ -57,4 +57,8 @@ public class Azienda {
     public void setDipendenti(List<Dipendente> dipendenti) {
         this.dipendenti.addAll(dipendenti);
     }
+
+    public void addDipendente(Dipendente dipendente){
+        dipendenti.add(dipendente);
+    }
 }
