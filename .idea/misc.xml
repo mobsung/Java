@@ -21,6 +21,7 @@
         <option value="$PROJECT_DIR$/HibSpriPokemon/pom.xml" />
         <option value="$PROJECT_DIR$/SpringHibernateImpiegati/pom.xml" />
         <option value="$PROJECT_DIR$/SpringHibernateAzienda/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -30,7 +31,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="17 (2)" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="17 (2)" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
