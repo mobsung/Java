@@ -1,14 +1,22 @@
 package FactorySingleton;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
 public class JsonExporter implements DataExport{
 
+    private static JsonExporter instance;
+
+    private JsonExporter() {}
+
+    public static JsonExporter getInstance() {
+        if (instance == null) {
+            instance = new JsonExporter();
+        }
+        return instance;
+    }
+
     @Override
-    public void export(List<String> data, String filename) {
+    public String formatter(List<String> data) {
         String text = "{\n";
         for(int i = 0; i < data.size(); i++){
             String [] array = data.get(i).split(":");
@@ -18,14 +26,7 @@ public class JsonExporter implements DataExport{
             }
         }
         text += "\n}\n";
-
-        try{
-            BufferedWriter bf = new BufferedWriter(new FileWriter(filename, true));
-            bf.write(text);
-            bf.close();
-        } catch (IOException e){
-            e.printStackTrace();
-        }
+        return text;
     }
 
     @Override
