@@ -23,6 +23,10 @@
         <option value="$PROJECT_DIR$/SpringHibernateAzienda/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/MM_quiz_Config_Server/pom.xml" />
+        <option value="$PROJECT_DIR$/MM_quiz_Eureka_Server/pom.xml" />
+        <option value="$PROJECT_DIR$/MM_quiz_Gateway_Server/pom.xml" />
+        <option value="$PROJECT_DIR$/MM_quiz_RD/pom.xml" />
+        <option value="$PROJECT_DIR$/MM_quiz_WR/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

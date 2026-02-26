@@ -6,17 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SpringAOP" />
         <module name="SpringHibernateImpiegati" />
+        <module name="MM_quiz_WR" />
+        <module name="MM_quiz_Eureka_Server" />
+        <module name="MM_quiz_Gateway_Server" />
+        <module name="spring02" />
+        <module name="MM_quiz_Config_Server" />
+        <module name="SpringEcommerce" />
+        <module name="SpringAOP" />
         <module name="HibSpriPokemon" />
         <module name="springUniversita" />
         <module name="progetto_maven_JDBC" />
         <module name="SpringStatisticheCalcoloAOP" />
         <module name="SpringHibernateAzienda" />
         <module name="springRubricaTelefonica" />
-        <module name="spring02" />
-        <module name="MM_quiz_Config_Server" />
-        <module name="SpringEcommerce" />
+        <module name="MM_quiz_RD" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -32,6 +36,10 @@
       <module name="DesignPattern.test" options="-parameters" />
       <module name="HibSpriPokemon" options="-parameters" />
       <module name="MM_quiz_Config_Server" options="-parameters" />
+      <module name="MM_quiz_Eureka_Server" options="-parameters" />
+      <module name="MM_quiz_Gateway_Server" options="-parameters" />
+      <module name="MM_quiz_RD" options="-parameters" />
+      <module name="MM_quiz_WR" options="-parameters" />
       <module name="SpringAOP" options="-parameters" />
       <module name="SpringDepIng" options="-parameters" />
       <module name="SpringEcommerce" options="-parameters" />
