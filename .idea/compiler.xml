@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringAOP" />
-        <module name="Java" />
         <module name="SpringHibernateImpiegati" />
         <module name="HibSpriPokemon" />
         <module name="springUniversita" />
@@ -16,11 +15,13 @@
         <module name="SpringHibernateAzienda" />
         <module name="springRubricaTelefonica" />
         <module name="spring02" />
+        <module name="MM_quiz_Config_Server" />
         <module name="SpringEcommerce" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="DesignPattern" target="17" />
+      <module name="Java" target="17" />
       <module name="SpringDepIng" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -30,6 +31,7 @@
       <module name="DesignPattern.main" options="-parameters" />
       <module name="DesignPattern.test" options="-parameters" />
       <module name="HibSpriPokemon" options="-parameters" />
+      <module name="MM_quiz_Config_Server" options="-parameters" />
       <module name="SpringAOP" options="-parameters" />
       <module name="SpringDepIng" options="-parameters" />
       <module name="SpringEcommerce" options="-parameters" />
