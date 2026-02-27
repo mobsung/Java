@@ -10,11 +10,13 @@
         <module name="MM_quiz_WR" />
         <module name="MM_quiz_Eureka_Server" />
         <module name="MM_quiz_Gateway_Server" />
+        <module name="Catalogo_WR" />
         <module name="spring02" />
         <module name="MM_quiz_Config_Server" />
         <module name="SpringEcommerce" />
         <module name="SpringAOP" />
         <module name="HibSpriPokemon" />
+        <module name="Catalogo_RD" />
         <module name="springUniversita" />
         <module name="progetto_maven_JDBC" />
         <module name="SpringStatisticheCalcoloAOP" />
@@ -31,6 +33,8 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Catalogo_RD" options="-parameters" />
+      <module name="Catalogo_WR" options="-parameters" />
       <module name="DesignPattern" options="-parameters" />
       <module name="DesignPattern.main" options="-parameters" />
       <module name="DesignPattern.test" options="-parameters" />
