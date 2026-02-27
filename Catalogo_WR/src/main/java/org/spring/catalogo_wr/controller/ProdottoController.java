@@ -29,7 +29,7 @@ class ProdottoController {
         return serviceProd.selezionaVersione(id);
     }
 
-    @GetMapping(path = "/prodotti", produces = "appication/json")
+    @GetMapping(path = "/prodotti", produces = "application/json")
     public List<ProdottoDTO> selezionaTutti(){
         return serviceProd.selezionaTutti();
     }
@@ -39,4 +39,8 @@ class ProdottoController {
         return serviceProd.rimuovi(id);
     }
 
+    @PatchMapping(path = "/prodotti/{id}/nome", produces = "application/json")
+    public ProdottoDTO modificaNome(@PathVariable int id, String nome){
+        return serviceProd.modificaNome(id, nome);
+    }
 }

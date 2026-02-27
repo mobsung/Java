@@ -1,6 +1,8 @@
 package org.spring.catalogo_wr.service;
 
 import static org.spring.catalogo_wr.utility.Mapper.*;
+
+import jakarta.transaction.Transactional;
 import org.spring.catalogo_wr.dto.ProdottoDTO;
 import org.spring.catalogo_wr.entity.Prodotto;
 import org.spring.catalogo_wr.exceptions.IdFoundException;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@Transactional
 class ProdottoServiceImpl implements ProdottoService{
 
     @Autowired
@@ -53,6 +56,15 @@ class ProdottoServiceImpl implements ProdottoService{
                 () -> new IdNotFoundException("prodotto non trovato"));
 
         daoProd.deleteById(id);
+        return ProdottoEntityDto(prodotto);
+    }
+
+    @Override
+    public ProdottoDTO modificaNome(int id, String nome) {
+        Prodotto prodotto = daoProd.findById(id).orElseThrow(
+                () -> new IdNotFoundException("prodotto non trovato"));
+
+        prodotto.setNome(nome);
         return ProdottoEntityDto(prodotto);
     }
 }

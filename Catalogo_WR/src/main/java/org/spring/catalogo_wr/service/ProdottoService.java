@@ -16,4 +16,6 @@ public interface ProdottoService {
 
     ProdottoDTO rimuovi(int id);
 
+    ProdottoDTO modificaNome(int id, String nome);
+
 }
