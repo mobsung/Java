@@ -11,6 +11,7 @@
         <module name="MM_quiz_Eureka_Server" />
         <module name="MM_quiz_Gateway_Server" />
         <module name="Catalogo_WR" />
+        <module name="MM_quiz_WR_Stream" />
         <module name="spring02" />
         <module name="MM_quiz_Config_Server" />
         <module name="SpringEcommerce" />
@@ -44,6 +45,7 @@
       <module name="MM_quiz_Gateway_Server" options="-parameters" />
       <module name="MM_quiz_RD" options="-parameters" />
       <module name="MM_quiz_WR" options="-parameters" />
+      <module name="MM_quiz_WR_Stream" options="-parameters" />
       <module name="SpringAOP" options="-parameters" />
       <module name="SpringDepIng" options="-parameters" />
       <module name="SpringEcommerce" options="-parameters" />
