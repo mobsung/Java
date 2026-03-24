@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/Catalogo_RD/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Catalogo_WR/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GestioneCC/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/GestioneContoCorrente/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/HibSpriPokemon/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MM_quiz_Config_Server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MM_quiz_Eureka_Server/src/main/java" charset="UTF-8" />

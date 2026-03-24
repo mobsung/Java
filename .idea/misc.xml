@@ -30,10 +30,13 @@
         <option value="$PROJECT_DIR$/Catalogo_WR/pom.xml" />
         <option value="$PROJECT_DIR$/Catalogo_RD/pom.xml" />
         <option value="$PROJECT_DIR$/MM_quiz_WR_Stream/pom.xml" />
+        <option value="$PROJECT_DIR$/GestioneContoCorrente/pom.xml" />
+        <option value="$PROJECT_DIR$/GestioneCC/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/GestioneContoCorrente/pom.xml" />
         <option value="$PROJECT_DIR$/SpringDepIng/pom.xml" />
         <option value="$PROJECT_DIR$/springRubricaTelefonica/SpringAOP/pom.xml" />
       </set>
